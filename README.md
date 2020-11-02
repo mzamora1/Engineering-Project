@@ -13,4 +13,5 @@ This repository contains all of the code, assets, libraries used in our project
  1. A new chrome browser window should open automatically with the game running 
  
  **Must use chrome or firefox**
+ 
  You can copy and paste the url into chrome if it opens explorer or safari
