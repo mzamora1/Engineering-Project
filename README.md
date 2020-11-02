@@ -7,7 +7,7 @@ This repository contains all of the code, assets, libraries used in our project
  1. Unzip downloaded file into a new folder and open that folder in VS code
  1. Download Live Server Extension
     * Press (ctrl + shift + x) on windows or click the bottom 'extensions' button on the left side of VS code  
-    * Search for 'Live Server by ritwick dey'
+    * Search for 'ritwickdey.liveserver'
     * Click 'install'
  1. Open 'home.html' in VS code and click 'Go Live' in the bottom right corner
  1. A new chrome browser window should open automatically with the game running 
