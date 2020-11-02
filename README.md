@@ -1,6 +1,10 @@
 # Engineering Project
 This repository contains all of the code, assets, libraries used in our project  
 
+Some exercises will run in the p5.editor but some wont
+
+For the most stable experience follow these instructions
+
 ## Instructions to run program:
  1. Download Visual Studio Code [here](https://code.visualstudio.com/Download)
  1. Clone repository on your computer (click green 'code' button on github and select 'Download zip')
