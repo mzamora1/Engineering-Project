@@ -1,5 +1,5 @@
 # Engineering Project
-This repository contains all of the code, assets, libraries used in our project \ 
+This repository contains all of the code, assets, libraries used in our project  
 
 Instructions to run program:
  1. Download Visual Studio Code [here](https://code.visualstudio.com/Download)
