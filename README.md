@@ -10,5 +10,5 @@ Instructions to run program:
     * Search for 'Live Server by ritwick dey'
     * Click 'install'
  1. Open 'home.html' in VS code and click 'Go Live' in the bottom right corner
- 1. A new chrome browser window should open automatically with the game running
+ 1. A new chrome browser window should open automatically with the game running /
  **must use chrome or firefox**
