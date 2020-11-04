@@ -157,8 +157,8 @@ function setup() {
 
 let pic =0;
 let timeStarted = 0;
-let timings = [1,1,1,1,1];
-//let timings = [5,5,10,10,10];
+//let timings = [1,1,1,1,1];
+let timings = [5,5,10,10,10];
 let firstTime=true;
 function draw() {
   clear();
