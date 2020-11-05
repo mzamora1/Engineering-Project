@@ -12,7 +12,7 @@ For the most stable experience follow these instructions
  1. Download Live Server Extension
     * Press (ctrl + shift + x) on windows or click the bottom 'extensions' button on the left side of VS code  
     * Search for 'ritwickdey.liveserver'
-    * Click 'install'
+    * Click 'install' and restart VS code
  1. Open 'home.html' in VS code and click 'Go Live' in the bottom right corner
  1. A new chrome browser window should open automatically with the game running 
  
