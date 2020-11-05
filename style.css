@@ -3,14 +3,13 @@ body{
 }
 
 #home{
-  border-style: dashed;
+  border-style: solid;
   background-color: aqua;
   width: 100%;
   height: 100%;
 }
 
 #buttons{
-  border-style: solid;
   margin: auto;
   width: fit-content;
   justify-content: center;
@@ -20,7 +19,7 @@ body{
   border-style: dotted;
   padding: 10px;
   display: inline-flex;
-  margin: 0 auto;
+  margin: 20px;
 }
 
 .text{
