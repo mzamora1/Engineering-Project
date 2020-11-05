@@ -4,9 +4,9 @@ let visitedboundaries = [];
 function setup() {
   createCanvas(400, 400);
   drawingArray = heartArray;
-  chalk = loadImage('assets/chalk.jpg', img => {image(img, 0, 0)});
-  laugh = loadSound('assets/laugh.mp3');
-  yay = loadSound('assets/yay.mp3');
+  chalk = loadImage('assets/pics/chalk.jpg', img => {image(img, 0, 0)});
+  laugh = loadSound('assets/sounds/laugh.mp3');
+  yay = loadSound('assets/sounds/yay.mp3');
   // flying_heart = loadImage('assets/flying_heart.gif');
   background(chalk);
 }
