@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="/Exercise 2/libraries/p5.min.js"></script> 
+    <script src="/Exercise 2/libraries/p5.sound.min.js"></script>
+    <script src="p5.play.js" type="text/javascript"></script> 
+    <script src="Exercise1InstanceMode.js"></script> 
+    <script src="Exercise2InstanceMode.js"></script> 
+    <script src="Exercise3InstanceMode.js"></script> 
+    <script>
+       function startExercise(exercise){
+            let myWindow = window.open("homeInstanceMode.html", "_self");
+            myWindow.document.write("<p></p>")
+                if(exercise == 1){
+                    new Exercise1();
+                }
+                else if(exercise == 2){
+                    new Exercise2();
+                }
+                else{
+                    new Exercise3();
+                } 
+            
+            
+        }
+    </script>
+    
+    <title>home</title>
+    <div id="home">
+        <h2 class = "text">Welcome to da Test screen</h2>
+        <div id="buttons">
+            <button class="navitem" onclick="startExercise(1);">Exercise 1</button>
+
+            <button class="navitem" onclick="startExercise(2);">Exercise 2</button>
+
+            <button class="navitem" onclick="startExercise(3);">Exercise 3</button>
+        </div>
+        <p class = "text">this is test</p>
+    </div>
+  </head>
+  <body>  
+    
+
+  </body>
+</html>
