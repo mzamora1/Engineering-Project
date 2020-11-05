@@ -3,7 +3,7 @@ This repository contains all of the code, assets, libraries used in our project
 
 Some exercises will run in the p5.editor but some wont
 
-For the most stable experience follow these instructions
+Check out the instance mode folder to see the differences
 
 ## Instructions to run program:
  1. Download Visual Studio Code [here](https://code.visualstudio.com/Download)
