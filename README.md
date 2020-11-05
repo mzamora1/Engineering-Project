@@ -1,8 +1,7 @@
 # Engineering Project
+Check out the instance mode folder to see the differences with normal p5.js
 
 Some exercises will run in the p5.editor but some wont
-
-Check out the instance mode folder to see the differences
 
 ## Instructions to run program:
  1. [Download Visual Studio Code](https://code.visualstudio.com/Download)
