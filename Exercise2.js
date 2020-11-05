@@ -11,7 +11,7 @@ class circleMover{ //makes moving objects easier by handling all vector math
   constructor(){
     this.startingVelocity = p5.Vector.random2D();
     this.startingVelocity.mult(3);
-    this.position = createVector(width/2, height/2); //starting position is center top of canvas
+    this.position = createVector(width/2, height/2); //starting position is center of canvas
     this.velocity = this.startingVelocity //calculate random inital starting velocity
     this.size = 20;
     this.color = {
@@ -157,13 +157,13 @@ function setup() {
 
 let pic =0;
 let timeStarted = 0;
-//let timings = [1,1,1,1,1];
-let timings = [5,5,10,10,10];
+let timings = [1,1,1,1,1];
+//let timings = [5,5,10,10,10];
 let firstTime=true;
 function draw() {
   clear();
-  div
-    .style("left", `${floor(window.outerWidth/4+width/4)}px`)
+  div //center the whole exercise dynamically 
+    .style("left", `${floor(window.outerWidth/2-width/2)}px`)
     .style("top", "50px");
 
   switch(gameState){
@@ -180,7 +180,7 @@ function draw() {
         twoPac.stop();
         gameState="instructions";
       }
-      if((millis()-timeStarted)>(timings[pic]*1000)){
+      if((millis()-timeStarted) > (timings[pic]*1000)){
         pic++;
         timeStarted = millis();
       }
@@ -242,23 +242,27 @@ function draw() {
 
     case "celebrate":
     //code for celebration screen
-    userInput.show();
+      userInput.show();
       userInput.value("Click the circles!");
       userInput.style("font-weight: bold");
       image(bg,0,0,400,350);
       for(var i = 0; i < circleMovers.length; i++){
+        circleMovers[i].updatePosition(); //calculate the XY coordinates of each vector
         let mouseIsOverCircle = dist(mouseX, mouseY, circleMovers[i].position.x, circleMovers[i].position.y) < circleMovers[i].size;
         if(mouseIsOverCircle){ //then stop that circle and change color
           circleMovers[i].velocity = 0;
           circleMovers[i].color.r = floor(random(0,256));
           circleMovers[i].color.b = floor(random(0,256));
           circleMovers[i].color.g = floor(random(0,256));
-        }else{
-          circleMovers[i].velocity = circleMovers[i].startingVelocity;
+          if(mouseIsPressed){
+            circleMovers = circleMovers.filter(mover => mover != circleMovers[i]); //add every mover besides the one that was clicked to circleMovers (remove the one that was clicked)
+          }
         }
-        fill(circleMovers[i].color.r,circleMovers[i].color.g,circleMovers[i].color.b);
-        circleMovers[i].updatePosition(); //calculate the XY coordinates of each vector
+        else circleMovers[i].velocity = circleMovers[i].startingVelocity;
+        if(circleMovers[i] != undefined){
+        fill(circleMovers[i].color.r, circleMovers[i].color.g, circleMovers[i].color.b);
         circle(circleMovers[i].position.x, circleMovers[i].position.y, circleMovers[i].size); //draw a circle with XY coordinates of each vector
+        }
       }
       textSize(50); fill(255);
       text("You rock!",200,150);
@@ -275,13 +279,3 @@ function draw() {
   }
 }
 let x=0;
-
-function mouseClicked(){
-  for(var i = 0; i < circleMovers.length; i++){
-    let mouseIsOverCircle = dist(mouseX, mouseY, circleMovers[i].position.x, circleMovers[i].position.y) < circleMovers[i].size;
-    if(mouseIsOverCircle){ //then make it disappear
-      circleMovers[i].size = 0;
-      circleMovers[i].startingVelocity = 0;
-    }
-  }
-}
