@@ -1,5 +1,4 @@
 # Engineering Project
-This repository contains all of the code, assets, libraries used in our project  
 
 Some exercises will run in the p5.editor but some wont
 
